@@ -1,7 +1,23 @@
 <main class="container">
+    
     <div class="root">
-        <h1> ¡¡ Hola {{ name }} !! </h1>
+        <h1> ¡¡ Hola {{ nombre }} !! </h1>
         <button class="boton" (click)="cambiarNombre()"> Cambiar </button>
     </div>
-    <app-change-title-button></app-change-title-button>
+
+    <!-- El atributo debe tener como valor el nombre de la propiedad -->
+    <!-- que es objeto del @Input : -->
+    <!-- [nombre]="nombre" -->
+    <app-change-title-button 
+        [nombre]="nombre" 
+        (nombreCambiado)="manejarCambio($event)">
+    </app-change-title-button>
+
+    <app-direccion 
+        [nombre]="nombre">
+    </app-direccion>
+
+    <app-plantilla></app-plantilla>
+
+    <app-reactivo></app-reactivo>
 </main>

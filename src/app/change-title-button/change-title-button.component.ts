@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector : 'app-change-title-button',
@@ -10,9 +10,15 @@ import { Component, Input } from '@angular/core';
 
 export class ChangeTitleButtonComponent {
 
-    titulo="¡¡Buenos días!!";
+  @Input() nombre! : string;
+  @Output() nombreCambiado = new EventEmitter<string>();
 
-    public cambiar() {
-      this.titulo = "¡¡Buenas noches!!";
-    }
+  saludo="Buenos días";
+
+  public cambiar() {
+    this.saludo = "Buenas noches";
+    this.nombre = "Nico";
+    this.nombreCambiado.emit(this.nombre);
+  }
+
 }
