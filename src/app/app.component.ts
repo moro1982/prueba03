@@ -5,13 +5,19 @@ import { DireccionComponent } from './direccion/direccion.component';
 import { FormsModule } from '@angular/forms';
 import { PlantillaComponent } from "./plantilla/plantilla.component";
 import { ReactivoComponent } from "./reactivo/reactivo.component";
+import { SignalExampleComponent } from './signal-example/signal-example.component';
 
 @Component({
   selector: 'app-root',
   // selector: '.app-test',
   // selector: '[app-test]',
   standalone:true,
-  imports: [ChangeTitleButtonComponent, DireccionComponent, PlantillaComponent, ReactivoComponent],
+  imports: [ChangeTitleButtonComponent, 
+            DireccionComponent, 
+            PlantillaComponent, 
+            ReactivoComponent,
+            SignalExampleComponent
+           ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
