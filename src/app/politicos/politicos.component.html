@@ -1,0 +1,30 @@
+
+<h1> Listar Politicos </h1>
+<button class="boton" (click)="getPoliticos()"> Listar Politicos </button>
+<ul>
+    <li *ngFor="let politico of politicos">
+        {{ politico.id }} - {{ politico.name }}
+    </li>
+</ul>
+
+<h1> Crear Nuevo Politico </h1>
+<form [formGroup]="datosPolitico" (ngSubmit)="crearPolitico()">
+    <label> Name:
+        <input type="text" formControlName="name">
+    </label>
+    <label> Alias:
+        <input type="text" formControlName="alias">
+    </label>
+    <label> Age:
+        <input type="number" formControlName="age">
+    </label>
+    <label> Damage:
+        <input type="number" formControlName="damage">
+    </label>
+    <label> Status:
+        <input type="number" formControlName="status">
+    </label>
+    <button type="submit">
+        Enviar
+    </button>
+</form>

@@ -1,22 +1,28 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
+import { FormsModule, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ChangeTitleButtonComponent } from './change-title-button/change-title-button.component';
 import { DireccionComponent } from './direccion/direccion.component';
-import { FormsModule } from '@angular/forms';
 import { PlantillaComponent } from "./plantilla/plantilla.component";
 import { ReactivoComponent } from "./reactivo/reactivo.component";
 import { SignalExampleComponent } from './signal-example/signal-example.component';
+import { PoliticosComponent } from "./politicos/politicos.component";
 
 @Component({
   selector: 'app-root',
   // selector: '.app-test',
   // selector: '[app-test]',
   standalone:true,
-  imports: [ChangeTitleButtonComponent, 
-            DireccionComponent, 
-            PlantillaComponent, 
-            ReactivoComponent,
-            SignalExampleComponent
+  imports: [
+            CommonModule,
+            FormsModule,
+            ReactiveFormsModule,
+            // ChangeTitleButtonComponent,
+            // DireccionComponent,
+            // PlantillaComponent,
+            // ReactivoComponent,
+            // SignalExampleComponent, 
+            PoliticosComponent
            ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
