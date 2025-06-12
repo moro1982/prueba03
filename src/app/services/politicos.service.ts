@@ -16,7 +16,7 @@ export class PoliticosService {
   }
 
   crearPolitico(politico : Politico) : Observable<Politico> {
-    return this.http.post<Politico>(this.apiUrl, politico);
+    return this.http.post<Politico>(this.apiUrl + "/single", politico);
   }
 
 }

@@ -16,14 +16,13 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
   styleUrl: './politicos.component.scss'
 })
 export class PoliticosComponent {
+  
   politicos : Politico[] = [];
   datosPolitico: FormGroup = new FormGroup({
-    id: new FormControl<number | null>(null),
+    // id: new FormControl<number | null>(null),
     name: new FormControl<string>('', [Validators.required]),
     alias: new FormControl<string>('', [Validators.required]),
-    age: new FormControl<number>(0, [Validators.required]),
-    damage: new FormControl<number>(0, [Validators.required]),
-    status: new FormControl<number>(1, [Validators.required]),
+    age: new FormControl<number>(0, [Validators.required])
   });
 
   constructor(private politicoService : PoliticosService) {}
@@ -35,8 +34,9 @@ export class PoliticosComponent {
   }
 
   crearPolitico() : void {
+    console.log(this.datosPolitico);
     const nuevoPolitico : Politico = this.datosPolitico.getRawValue();
-    console.log(nuevoPolitico);
+    console.log(nuevoPolitico); // Debug
     this.politicoService.crearPolitico(nuevoPolitico).subscribe({
       next : res => console.log("Guardado con éxito: ", res),
       error : err => console.log("Error al guardar: ", err)
