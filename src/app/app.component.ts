@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ChangeTitleButtonComponent } from './change-title-button/change-title-button.component';
-import { DireccionComponent } from './direccion/direccion.component';
-import { PlantillaComponent } from "./plantilla/plantilla.component";
-import { ReactivoComponent } from "./reactivo/reactivo.component";
-import { SignalExampleComponent } from './signal-example/signal-example.component';
+// import { ChangeTitleButtonComponent } from './change-title-button/change-title-button.component';
+// import { DireccionComponent } from './direccion/direccion.component';
+// import { PlantillaComponent } from "./plantilla/plantilla.component";
+// import { ReactivoComponent } from "./reactivo/reactivo.component";
+// import { SignalExampleComponent } from './signal-example/signal-example.component';
 import { PoliticosComponent } from "./politicos/politicos.component";
 import { TableroComponent } from "./tablero/tablero.component";
 

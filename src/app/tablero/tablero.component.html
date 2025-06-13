@@ -1,10 +1,12 @@
 <div class="tablero">
-    <div *ngFor="let ministerio of ministeriosConMinistro; let i = index"
+    <div 
+        *ngFor="let ministerio of ministeriosConMinistro; let i = index"
          [ngClass]="posiciones[i % posiciones.length]"
     >
         <p> {{ ministerio.name }} </p>
         <p> Número de purga >= {{ ministerio.purgeNr }} </p>
-        <p> {{ ministerio.ministro.name }} </p>
+        <p *ngIf="ministerio.ministro"> {{ ministerio.ministro.name }} </p>
+        <p *ngIf="!ministerio.ministro"> VACANTE </p>
     </div>
     <!-- <div>
         <p id="alias"> </p>

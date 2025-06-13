@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ministry } from '../models/ministry';
 import { MinistryService } from '../services/ministry.service';
 import { Politico } from '../models/politico';
-import { PoliticosService } from '../services/politicos.service';
+import { PoliticoService } from '../services/politico.service';
 
 @Component({
   selector: 'app-tablero',
@@ -25,10 +25,9 @@ export class TableroComponent implements OnInit {
 
   constructor(
     private ministryService : MinistryService, 
-    private politicoService : PoliticosService
+    private politicoService : PoliticoService
   ){}
 
-  
   ngOnInit(): void {
     this.getMinisterios();
     this.getPoliticos();
@@ -47,18 +46,11 @@ export class TableroComponent implements OnInit {
     });
   }
 
-getMinisteriosConMinistro() {
-  this.ministeriosConMinistro = this.ministerios.map( min => ({
-    ...min,
-    ministro : this.politicos.find(p => p.id === min.ministerId)!
-  }));
-}
-
-// ngOnInit() {
-//   this.ministeriosConPolitico = this.ministerios.map(min => ({
-//     ...min,
-//     politico: this.politicos.find(p => p.id === min.politicoId)!
-//   }));
-// }
+  getMinisteriosConMinistro() {
+    this.ministeriosConMinistro = this.ministerios.map( min => ({
+      ...min,
+      ministro : this.politicos.find(p => p.id === min.ministerId)!
+    }));
+  }
 
 }

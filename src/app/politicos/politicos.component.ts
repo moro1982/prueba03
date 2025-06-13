@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Politico } from '../models/politico';
-import { PoliticosService } from '../services/politicos.service';
+import { PoliticoService } from '../services/politico.service';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
@@ -26,7 +26,7 @@ export class PoliticosComponent {
     age: new FormControl<number>(0, [Validators.required])
   });
 
-  constructor(private politicoService : PoliticosService) {}
+  constructor(private politicoService : PoliticoService) {}
 
   getPoliticos() {
     this.politicoService.getPoliticos().subscribe( data => {

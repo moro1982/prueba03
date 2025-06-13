@@ -6,7 +6,8 @@ import { Politico } from '../models/politico';
 @Injectable({
   providedIn: 'root'
 })
-export class PoliticosService {
+export class PoliticoService {
+
   private apiUrl = 'http://localhost:8080/politico';
 
   constructor(private http: HttpClient) {}
@@ -22,5 +23,5 @@ export class PoliticosService {
   crearPolitico(politico : Politico) : Observable<Politico> {
     return this.http.post<Politico>(this.apiUrl + "/single", politico);
   }
-
+  
 }
