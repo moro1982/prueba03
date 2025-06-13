@@ -1,24 +1,28 @@
 
-<h1> Listar Politicos </h1>
-<button class="boton" (click)="getPoliticos()"> Listar Politicos </button>
-<ul>
-    <li *ngFor="let politico of politicos">
-        {{ politico.id }} - {{ politico.name }}
-    </li>
-</ul>
+<div class="politico-bloque">
+    <h1> Listar Politicos </h1>
+    <button class="boton" (click)="getPoliticos()"> Listar Politicos </button>
+    <ul>
+        <li *ngFor="let politico of politicos">
+            {{ politico.id }} - {{ politico.name }}
+        </li>
+    </ul>
+</div>
 
-<h1> Crear Nuevo Politico </h1>
-<form [formGroup]="datosPolitico" (ngSubmit)="crearPolitico()">
-    <label> Name:
-        <input type="text" formControlName="name">
-    </label>
-    <label> Alias:
-        <input type="text" formControlName="alias">
-    </label>
-    <label> Age:
-        <input type="number" formControlName="age">
-    </label>
-    <button type="submit">
-        Enviar
-    </button>
-</form>
+<div class="politico-bloque">
+    <h1> Crear Nuevo Politico </h1>
+    <form class="formulario" [formGroup]="datosPolitico" (ngSubmit)="crearPolitico()">
+        <label class="campo01"> Name:
+            <input type="text" formControlName="name">
+        </label>
+        <label class="campo02"> Alias:
+            <input type="text" formControlName="alias">
+        </label>
+        <label class="campo03"> Age:
+            <input type="number" formControlName="age">
+        </label>
+        <button class="boton boton-enviar" type="submit">
+            Enviar
+        </button>
+    </form>
+</div>
