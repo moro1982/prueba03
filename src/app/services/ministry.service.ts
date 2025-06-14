@@ -20,4 +20,8 @@ export class MinistryService {
     return this.http.get<Ministry[]>(this.apiURL + "/all");
   }
 
+  asignarMinistro(idMin : number, idPol : number) : Observable<Ministry> {
+    return this.http.put<Ministry>(this.apiURL + "/" + idMin + "/" + idPol, null);
+  }
+
 }
