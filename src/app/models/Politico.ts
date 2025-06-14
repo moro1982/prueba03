@@ -1,7 +1,7 @@
 
 export class Politico {
 
-    id?: number;
+    id!: number;
     name!: string;
     alias!: string;
     age!: number;

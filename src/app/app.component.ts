@@ -8,6 +8,7 @@ import { FormsModule, FormGroup, ReactiveFormsModule } from '@angular/forms';
 // import { SignalExampleComponent } from './signal-example/signal-example.component';
 import { PoliticosComponent } from "./politicos/politicos.component";
 import { TableroComponent } from "./tablero/tablero.component";
+import { ControlesComponent } from "./controles/controles.component";
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,8 @@ import { TableroComponent } from "./tablero/tablero.component";
     // ReactivoComponent,
     // SignalExampleComponent, 
     PoliticosComponent,
-    TableroComponent
+    TableroComponent,
+    ControlesComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

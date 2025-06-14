@@ -21,7 +21,11 @@ export class MinistryService {
   }
 
   asignarMinistro(idMin : number, idPol : number) : Observable<Ministry> {
-    return this.http.put<Ministry>(this.apiURL + "/" + idMin + "/" + idPol, null);
+    return this.http.put<Ministry>(this.apiURL + "/" + idMin + "/ministro/" +  idPol, null);
+  }
+
+  quitarMinistro(idMin : number) : Observable<Ministry> {
+    return this.http.delete<Ministry>(this.apiURL + "/" + idMin + "/ministro");
   }
 
 }

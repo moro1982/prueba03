@@ -3,7 +3,7 @@ import { Politico } from "./politico";
 
 export class Ministry {
     
-    id? : number;
+    id! : number;
     name! : string;
     isVacant! : boolean;
     purgeNr! : number;

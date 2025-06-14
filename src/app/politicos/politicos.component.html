@@ -13,15 +13,15 @@
     <h1> Crear Nuevo Politico </h1>
     <form class="formulario" [formGroup]="datosPolitico" (ngSubmit)="crearPolitico()">
         <label class="campo01"> Name:
-            <input type="text" formControlName="name">
+            <input type="text" formControlName="name" required>
         </label>
         <label class="campo02"> Alias:
-            <input type="text" formControlName="alias">
+            <input type="text" formControlName="alias" required>
         </label>
         <label class="campo03"> Age:
-            <input type="number" formControlName="age">
+            <input type="number" formControlName="age" required>
         </label>
-        <button class="boton boton-enviar" type="submit">
+        <button class="boton boton-enviar" type="submit" [disabled]="!datosPolitico.valid">
             Enviar
         </button>
     </form>
